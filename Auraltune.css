@@ -92,7 +92,7 @@ transition-duration: 1s;
 
 /* categories */
 .categories2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 4%;
     display: block;
     margin-left: 2%;
@@ -125,7 +125,7 @@ transition-duration: 1s;
         flex-shrink: 0;
         font-weight: bolder;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1rem;
         color: white;
         border-radius: 10px;
 }
