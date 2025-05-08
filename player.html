@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="audio-player">
+    <audio src="The Greatest.mp3" id="audio"></audio>
+    <div class="visualizer" id="visualizer">
+        <span></span><span></span><span></span>
+<span></span><span></span>
+    </div>
+
+</div>
+
+<div class="controls">
+    <button id="preview">⏪</button>
+    <button id="play">◀</button>
+    <button id="next">⏩</button>
+    <button id="shuffle">🔀</button>
+</div>
+
+<input type="range" id="progress" value="0" max="100">
+<div class="time">
+    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+</div>
+<input type="range" id="volume" min="0" max="1"
+step="0.01" value="1">
+<a href="#" id="download" download>Download</a>
+    
+<audio src="The Greatest.mp3" >fegvs</audio>
+
+<script>
+const audio =
+document.getElementById("audio");
+    const playBtn =
+        document.getElementById("play");
+    const previewBtn =
+        document.getElementById("prev");
+        const nextBtn =
+                document.getElementById("next");
+                const shuffleBtn =
+                        document.getElementById("shuffle");
+                        const progress =
+                                document.getElementById("progress");
+    const volume =
+        document.getElementById("volume");
+        const currentTimeEl =
+                document.getElementById("current-time");
+                const durationEl =
+                        document.getElementById("duration");
+    const visualizer =
+        document.getElementById("#visualizerspan");
+        const downloadBtn =
+                document.getElementById("download");
+
+let.currentTrack = 0;
+let isShuffling = false;
+
+const playlist = [
+    "track1.mp3",
+    "track2.mp3",
+    "track3.mp3"
+];
+
+function loadTrack(index) {
+    const track = playlist[index];
+    audio.src = track;
+    downloadBtn.href = track;
+    audio.load();
+    audio.play();
+    playBtn.textContent = "🎵";
+    togglAnimation(true);
+}
+  else {
+    audio.pause();
+    playBtn.textContent = "◀";
+    toggleAnimation(false);
+ }
+
+function toggleAnimation(active) {
+    visualizer.forEach(bar => {
+        bar.style.animationPlayState = active ? "running" : "pause";
+    });
+}
+
+playBtn.addEventListener("click", () => {if (audio.paused) {
+    audio.play();
+    playBtn.textContent ="🎵"
+    toggleAnimation(true);
+} else {
+    audio.pause();
+    playBtn.textContent = "◀";
+    toggleAnimation(false);
+}
+});
+
+prevBtn.addEventListener("click", () => {
+    currentTrack = (currentTrack - 1 +
+    playlist.length) % playlist.length;
+    loadTrack(currentTrack);
+});
+
+nextBtn.addEventListener("click", () => {
+    if (isShuffling) {
+        currentTrack = Math.floor(Math.random() * playlist.length);
+    } else {
+        currentTrack = (currentTrack + 1) % playlist.length;
+    }
+    loadTrack(currentTrack);
+});
+
+shuffleBtn.addEventListener("click", () => {
+    isShuffling = !isShuffling;
+    shuffleBtn.style.background = isShuffling ? "red" : "blur"
+});
+
+audio.addEventListener("timeupdate",() => {
+    const percent = (audio.currentTime / audio.duration) 100;
+    progress.value = percent || 0;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    durationEl.textContent = formatTime(audio.duration);
+});
+
+progress.addEventListener("input", () => {
+    audio.currentTime = ([rog])
+})
+
+
+</script>
+
+
+</body>
+</html>

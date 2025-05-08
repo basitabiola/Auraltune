@@ -1,0 +1,1 @@
+alert('Note: this website is for practical')

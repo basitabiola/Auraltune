@@ -1,0 +1,378 @@
+* {
+    margin: none;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-family: verdana;
+    font-weight: bolder;
+    margin-left: 2%;
+    color: white;
+}
+/* for the music downloader */
+.md{
+    color: white;
+    padding-left: 15%;
+}
+
+/* seatch */
+.search {
+    width: 70%;
+    height: 5vh;
+    border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: white;
+    background: rgb(109, 107, 107);
+}
+
+.search::placeholder {
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+/* search button */
+.search-button{
+width: 20%;
+height: 4.8vh;
+border: none;
+margin-top: 5.1%;
+font-size: 1.11rem;
+background: white;
+border-bottom-right-radius: 15px;
+border-top-right-radius: 15px;
+transition-duration: 1s;
+}
+.search-button:hover {
+    background: red;
+}
+/* popular parent */
+.popular {
+    width: 97%;
+    margin: auto;
+    height: 31vh;
+    background: black;
+    margin-top: 5%;
+    display: flex;
+    gap: 5%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+/* popular child */
+.pchild {
+    width: 99%;
+    height: 30vh;
+    margin-top: 1%;
+    background: rgb(32, 31, 31);
+    scroll-snap-align: center;
+    box-shadow: 0px 20px 30px black inset;
+    padding: 5px 3px;
+    flex-shrink: 0;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-family: verdana;
+    border-radius: 10px;
+    border: solid 2px rgb(51, 48, 48);
+}
+
+/* categories */
+.categories2 {
+    font-size: 1.5rem;
+    margin-top: 4%;
+    display: block;
+    margin-left: 2%;
+    font-family: georgia;
+}
+
+/* categories */
+.categories {
+    width: 97%;
+    margin: auto;
+    height: 7vh;
+    background: black;
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+/* categories child */
+.categories-child{
+    width: 28%;
+        height: 5vh;
+        margin-top: 1%;
+        background: rgb(51, 50, 50);
+        scroll-snap-align: center;
+        padding: 5px 3px;
+        flex-shrink: 0;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 1.3rem;
+        color: white;
+        border-radius: 10px;
+}
+.categories-child:hover {
+background: white;
+color: black;
+}
+
+/* new release */
+.New {
+    font-size: 2rem;
+    margin-top: 4%;
+    display: block;
+    margin-left: 2%;
+    font-family: georgia;
+}
+
+/* visualizer parent */
+.parent{
+    margin-left: 40%;
+    background: none;
+    width: 30%;
+    height: 8vh;
+}
+/* visualizer */
+
+.div1{
+    width: 15%;
+    height: 8vh;
+    background: red;
+    display: inline-block;
+    animation: div1 1s 0.5s infinite alternate;
+}
+.div2 {
+    margin-left: 2%;
+width: 16%;
+    height: 8vh;
+    background: red;
+    display: inline-block;
+    animation: div2 1s 1s infinite alternate;
+}
+.div3 {
+width: 17%;
+    height: 8vh;
+    background: red;
+    display: inline-block;
+    animation: div3 1s 1.5s infinite alternate;
+}
+.div4 {
+    width: 17%;
+    height: 8vh;
+    background: red;
+    display: inline-block;
+    animation: div4 1s 2.1s infinite alternate;
+}
+.div5 {
+    width: 17%;
+    height: 8vh;
+    background: none;
+display: inline-block;
+animation: div5 2s 1s ;
+}
+
+@keyframes div1{
+    1%{
+height:1vh ;
+    }
+    100%{
+height: 8vh;
+    }
+}
+@keyframes div2 {
+    1% {
+        height: 1vh;
+    }
+
+    100% {
+        height: 8vh;
+    }
+}
+@keyframes div3 {
+    1% {
+        height: 1vh;
+    }
+
+    100% {
+        height: 8vh;
+    }
+}
+@keyframes div4 {
+    1% {
+        height: 1vh;
+    }
+
+    100% {
+        height: 8vh;
+    }
+}
+
+@keyframes div5 {
+    1% {
+        height: 8vh;
+    }
+
+    100% {
+        height: 8vh;
+    }
+}
+
+/* for tyhe list */
+.list {
+    width: 97%;
+
+}
+
+/* for the child */
+.list-child {
+    position: relative;
+    height: 10vh;
+    width: 95%;
+    color: white;
+    margin: auto;
+    background: rgb(36, 34, 34);
+    margin-top: 2%;
+    border-radius: 5px;
+}
+
+.list-child:hover {
+    background: rgb(53, 50, 50);
+}
+
+/* work-of-art */
+.work-of-art {
+    width: 18%;
+    margin-left: 1%;
+    margin-top: 0.7%;
+    border-radius: 10px;
+    position: relative;
+    top: -35%;
+    left: 1%;
+}
+
+.work-of {
+    width: 18%;
+    margin-left: 2%;
+    margin-top: 0.7%;
+    border-radius: 10px;
+
+}
+
+/* song-tittle */
+.song-tittle {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding-top: 5%;
+    padding-left: 23%;
+    font-family: verdana;
+}
+
+.song-tittle {
+    font-size: 1rem;
+    font-weight: bolder;
+    display: inline;
+    padding-top: 2%;
+    padding-left: 3%;
+    font-family: verdana;
+    position: absolute;
+
+}
+
+
+/* artist */
+.artist {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    margin-top: -6%;
+    padding-left: 23%;
+    font-family: verdana;
+}
+
+/* donaload icon */
+.download-icon {
+    width: 12%;
+    border-radius: 10px;
+position: absolute;
+    top: 30%;
+    left: 85%;
+
+}
+.play{
+    position: absolute;
+    top: 20%;
+    left: 67%;
+    font-size: 2.5rem;
+}
+
+/* anchor tag */
+a{
+    text-decoration: none;
+}
+
+footer {
+    background: rgb(27, 26, 26);
+    width: 100%;
+    height: 20vh;
+}
+
+.auraltune{
+text-align: center;
+font-size: 1.3rem;
+font-family: verdana;
+padding-left: 35%;
+}
+/* copyright */
+.copyright{
+    font-family: verdana;
+        padding-left: 25%;
+        padding-top: 5%;
+        display: block;
+}
+/* email */
+.email{
+    display: block;
+    padding-top: 6%;
+    padding-left: 40%;
+    font-size: 1.1rem;
+}
+/* call */
+.call{
+    display:block;
+    padding-left: 33%;
+    padding-top: 1%;
+}
+/* anchor tag */
+.a{
+    text-decoration: none;
+    color: white;
+}
+/* for the music downloader */
+.h4{
+    padding-top: 0%;
+    display: block;
+    padding-left: 1%;
+}
+/* for loading more */
+.more{
+    text-align: center;
+    display: block;
+}
